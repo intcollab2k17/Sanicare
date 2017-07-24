@@ -15,10 +15,9 @@
 						<div class="a-col">
 							<section>
 								<select class="cs-select cs-skin-border">
-									<option value="" disabled selected>Select Hotel</option>
-									<option value="email">Luxe Hotel</option>
+									<option value="" disabled selected>Select Hotel</option>							
 									<option value="twitter">Deluxe Hotel</option>
-									<option value="linkedin">Five Star Hotel</option>
+									<option value="linkedin">Standard Hotel</option>
 								</select>
 							</section>
 						</div>
@@ -84,7 +83,7 @@
 				<div class="feature-full-1col">
 					<div class="image" style="background-image: url(images/hotel_feture_1.jpg);">
 						<div class="descrip text-center">
-							<p><small>For as low as</small><span>$100/night</span></p>
+							<p><small>For as low as</small><span>Php.699/night</span></p>
 						</div>
 					</div>
 					<div class="desc">
@@ -98,11 +97,11 @@
 					<div class="f-hotel">
 						<div class="image" style="background-image: url(images/hotel_feture_2.jpg);">
 							<div class="descrip text-center">
-								<p><small>For as low as</small><span>$99/night</span></p>
+								<p><small>For as low as</small><span>Php.699/night</span></p>
 							</div>
 						</div>
 						<div class="desc">
-							<h3>Hotel Bora</h3>
+							<h3>Standard Hotel</h3>
 							<p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestas. Etiam euismod tempor leo, 
 							in suscipit urna condimentum sed. </p>
 							<p><a href="#" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
@@ -111,11 +110,11 @@
 					<div class="f-hotel">
 						<div class="image" style="background-image: url(images/hotel_feture_3.jpg);">
 							<div class="descrip text-center">
-								<p><small>For as low as</small><span>$99/night</span></p>
+								<p><small>For as low as</small><span>Php.699/night</span></p>
 							</div>
 						</div>
 						<div class="desc">
-							<h3>D’Morvie</h3>
+							<h3>Sea Breeze Launge</h3>
 							<p>Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestas. Etiam euismod tempor leo, in suscipit urna condimentum sed. </p>
 							<p><a href="#" class="btn btn-primary btn-luxe-primary">Book Now <i class="ti-angle-right"></i></a></p>
 						</div>
@@ -286,149 +285,7 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="testimonial">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-title text-center">
-						<h2>Happy Customer Says...</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="testimony">
-						<blockquote>
-							&ldquo;If you’re looking for a top quality hotel look no further. We were upgraded free of charge to the Premium Suite, thanks so much&rdquo;
-						</blockquote>
-						<p class="author"><cite>John Doe</cite></p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="testimony">
-						<blockquote>
-							&ldquo;Me and my wife had a delightful weekend get away here, the staff were so friendly and attentive. Highly Recommended&rdquo;
-						</blockquote>
-						<p class="author"><cite>Rob Smith</cite></p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="testimony">
-						<blockquote>
-							&ldquo;If you’re looking for a top quality hotel look no further. We were upgraded free of charge to the Premium Suite, thanks so much&rdquo;
-						</blockquote>
-						<p class="author"><cite>Jane Doe</cite></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div id="fh5co-blog-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-title text-center">
-						<h2>Our Blog</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="blog-grid" style="background-image: url(images/image-1.jpg);">
-						<div class="date text-center">
-							<span>09</span>
-							<small>Aug</small>
-						</div>
-					</div>
-					<div class="desc">
-						<h3><a href="#">Most Expensive Hotel</a></h3>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="blog-grid" style="background-image: url(images/image-2.jpg);">
-						<div class="date text-center">
-							<span>09</span>
-							<small>Aug</small>
-						</div>
-					</div>
-					<div class="desc">
-						<h3><a href="#">1st Anniversary of Luxe Hotel</a></h3>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="blog-grid" style="background-image: url(images/image-3.jpg);">
-						<div class="date text-center">
-							<span>09</span>
-							<small>Aug</small>
-						</div>
-					</div>
-					<div class="desc">
-						<h3><a href="#">Discover New Adventure</a></h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<footer id="footer" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="copyright">
-						<p><small>&copy; 2016 Free HTML5 Template. <br> All Rights Reserved. <br>
-						Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> <br> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-3">
-							<h3>Company</h3>
-							<ul class="link">
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Hotels</a></li>
-								<li><a href="#">Customer Care</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<h3>Our Facilities</h3>
-							<ul class="link">
-								<li><a href="#">Resturant</a></li>
-								<li><a href="#">Bars</a></li>
-								<li><a href="#">Pick-up</a></li>
-								<li><a href="#">Swimming Pool</a></li>
-								<li><a href="#">Spa</a></li>
-								<li><a href="#">Gym</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<h3>Subscribe</h3>
-							<p>Sed cursus ut nibh in semper. Mauris varius et magna in fermentum. </p>
-							<form action="#" id="form-subscribe">
-								<div class="form-field">
-									<input type="email" placeholder="Email Address" id="email">
-									<input type="submit" id="submit" value="Send">
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<ul class="social-icons">
-						<li>
-							<a href="#"><i class="icon-twitter-with-circle"></i></a>
-							<a href="#"><i class="icon-facebook-with-circle"></i></a>
-							<a href="#"><i class="icon-instagram-with-circle"></i></a>
-							<a href="#"><i class="icon-linkedin-with-circle"></i></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
+		<?php include 'footer.php';?>
 
 	</div>
 	<!-- END fh5co-page -->
