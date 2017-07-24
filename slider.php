@@ -32,6 +32,7 @@
 		   				</div>
 		   			</div>
 		   		</div>
+				
 		   	</li>
 		   	<li style="background-image: url(images/slider3.jpg);">
 		   		<div class="overlay-gradient"></div>
