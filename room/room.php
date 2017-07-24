@@ -1,5 +1,4 @@
 <?php include 'header_room.php';?>
-<?php include 'session.php';?>
 <body class="page-md page-header-fixed">
 <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
 	<!-- BEGIN HEADER INNER -->
@@ -23,64 +22,45 @@
 	<!-- END HEADER INNER -->
 </div>
 <div class="page-container">
-		<div class="page-content">
+		<div class="page-container">
 			<div class="portlet light">
 				<div class="portlet-body">
 					<div class="row">
+					<?php
+						
+							$querym=mysqli_query($con,"select * from room natural join room_category where room_id='$id' order by category_name")or die(mysqli_error($con));
+								while ($rowm=mysqli_fetch_array($querym)){								
+								$room_number=$rowm['room_number'];
+								$room_desc=$rowm['room_desc'];								
+								$room_rate=$rowm['room_rate'];								
+								$room_pic=$rowm['room_pic'];								
+								
+					?> 
 						<div class="col-md-9 news-page blog-page">
 							<div class="row">
 								<div class="col-md-12 blog-tag-data">
-									<h3 style="margin-top:0">Recent News</h3>
-									<img src="../admin/assets//admin/pages/media/gallery/item_img1.jpg" class="img-responsive" alt="">
-									<div class="row">
-										<div class="col-md-6">
-											<ul class="list-inline blog-tags">
-												<li>
-													<i class="fa fa-tags"></i>
-													<a href="javascript:;">
-													Technology </a>
-													<a href="javascript:;">
-													Education </a>
-													<a href="javascript:;">
-													Internet </a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-md-6 blog-tag-data-inner">
-											<ul class="list-inline">
-												<li>
-													<i class="fa fa-calendar"></i>
-													<a href="javascript:;">
-													April 16, 2013 </a>
-												</li>
-												<li>
-													<i class="fa fa-comments"></i>
-													<a href="javascript:;">
-													38 Comments </a>
-												</li>
-											</ul>
-										</div>
-									</div>
+									
+									<img style = "width:100%;" src="../admin/uploads/<?=$room_pic?>" class="img-responsive" alt="">								
 									<div class="news-item-page">
+									<h3 style="margin-top:0">Room# <?=$room_number;?></h3>
 										<p>
-											 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culp orem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus.
-										</p>
-										<blockquote class="hero">
-											<p>
-												 Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.
-											</p>
-											<small>Someone famous <cite title="Source Title">Source Title</cite></small>
-										</blockquote>
-										<p>
-											 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique dimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus.
-										</p>
+											 <?=$room_desc?>
+										</p>										
 									</div>									
 							</div>
 						</div>
 					</div>
+					
 					<div class= "col-lg-3 col-sm-3 col-md-3 col-xs-3">
-
+						<span style="font-size:32px;">Rate :</span> Php. <?=$room_rate?>.00
+						<div class = "clearfix">
+							&nbsp;
+						</div>
+						<div class = "row">
+							<a href = "" class = "btn-success btn btn-block btn-lg">Book Now</a>
+						</div>
 					</div>
+					<?php }?>		
 				</div>
 			</div>
 		</div>

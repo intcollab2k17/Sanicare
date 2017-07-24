@@ -1,3 +1,7 @@
+<?php include 'dbcon.php';
+
+$id = $_GET['id'];
+;?>
 
 <!DOCTYPE html><!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
