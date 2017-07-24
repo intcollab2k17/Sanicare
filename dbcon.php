@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","hotel");
+$con = mysqli_connect("localhost","root","stratium","hotel");
 
 // Check connection
 if (mysqli_connect_errno())
