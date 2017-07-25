@@ -50,7 +50,7 @@
 							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
-							<span class = "room-number"><a href="viewroom.php?.room_id=<?=$room_id?>">Room# <?=$rowm['room_number']?></a><a class = "pull-right btn btn-xs btn-success" href = "viewroom.php?.room_id=<?=$room_id?>">view more</a></span>
+							<span class = "room-number"><a href="room/room.php?id=<?=$room_id;?>">Room# <?=$rowm['room_number']?></a><a class = "pull-right btn btn-xs btn-success" href = "room/room.php?id=<?=$room_id;?>">view more</a></span>
 							<p><?=$rowm['room_desc'];?></p>
 						</div>
 					</div>					
