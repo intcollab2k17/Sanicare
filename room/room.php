@@ -57,7 +57,7 @@
 							&nbsp;
 						</div>
 						<div class = "row">
-							<a href = "" class = "btn-success btn btn-block btn-lg">Book Now</a>
+							<a href = "reservation.php?id=<?=$rowm['room_id'];?>" class = "btn-success btn btn-block btn-lg">Book Now</a>
 						</div>
 					</div>
 					<?php }?>		
