@@ -63,7 +63,7 @@ var FormWizard = function () {
                         required: true,
                         email: true
                     },
-                    phone: {
+                    phone_number : {
                         required: true
                     },
                     gender: {

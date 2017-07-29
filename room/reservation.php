@@ -1,3 +1,7 @@
+<?php 
+$room = $_GET['id']; 
+?>
+
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.2
@@ -18,7 +22,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Metronic | Form Stuff - Form Wizard</title>
+<title>Sea Breeze Hotel Bacolod</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -119,7 +123,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="number">
 												3 </span>
 												<span class="desc">
-												<i class="fa fa-check"></i> Billing Setup </span>
+												<i class="fa fa-check"></i> Reservation Set up </span>
 												</a>
 											</li>
 											<li>
@@ -161,7 +165,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<input type="password" class="form-control" name="lastname"/>
+														<input type="text" class="form-control" name="lastname"/>
 														<span class="help-block">
 														Provide your Lastname </span>
 													</div>
@@ -190,13 +194,23 @@ License: You must have a valid license purchased only from themeforest(the above
 											<div class="tab-pane" id="tab2">
 												<h3 class="block">Provide your profile details</h3>
 												<div class="form-group">
-													<label class="control-label col-md-3">Fullname <span class="required">
+													<label class="control-label col-md-3">Home Address <span class="required">
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control" name="fullname"/>
+														<textarea type="text" class="form-control" name="address"/></textarea>
 														<span class="help-block">
-														Provide your fullname </span>
+														Provide your complete address </span>
+													</div>
+												</div>
+													<div class="form-group">
+													<label class="control-label col-md-3">City/Town <span class="required">
+													* </span>
+													</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" name="city"/>
+														<span class="help-block">
+														Provide your city or town </span>
 													</div>
 												</div>
 												<div class="form-group">
@@ -204,7 +218,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control" name="phone"/>
+														<input type="text" class="form-control" name="phone_number"/>
 														<span class="help-block">
 														Provide your phone number </span>
 													</div>
@@ -225,49 +239,29 @@ License: You must have a valid license purchased only from themeforest(the above
 														<div id="form_gender_error">
 														</div>
 													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Address <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="address"/>
-														<span class="help-block">
-														Provide your street address </span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">City/Town <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="city"/>
-														<span class="help-block">
-														Provide your city or town </span>
-													</div>
-												</div>
+												</div>												
+											
 												
-												<div class="form-group">
-													<label class="control-label col-md-3">Remarks</label>
-													<div class="col-md-4">
-														<textarea class="form-control" rows="3" name="remarks"></textarea>
-													</div>
-												</div>
 											</div>
 											<div class="tab-pane" id="tab3">
 												<h3 class="block">Provide your billing and credit card details</h3>
 												<div class="form-group">
-													<label class="control-label col-md-3">Card Holder Name <span class="required">
+													<label class="control-label col-md-3">Selected Hotel <span class="required">
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control" name="card_name"/>
+													<?php include 'dbcon.php';
+													 $querym=mysqli_query($con,"select * from room WHERE room_id = '$room'")or die(mysqli_error($con));	
+													 	$row=mysqli_fetch_array($querym)
+														?>												
+														<input type="text" class="form-control" value = "Room# <?=$row['room_number'];?>" placeholder = "<?=$row['room_number'];?>" disabled/>
+														<input type = "hidden" name = "room_id" value= "<?=$room?>">
 														<span class="help-block">
 														</span>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="control-label col-md-3">Card Number <span class="required">
+													<label class="control-label col-md-3"> <span class="required">
 													* </span>
 													</label>
 													<div class="col-md-4">
