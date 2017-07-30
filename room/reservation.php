@@ -261,58 +261,33 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="control-label col-md-3"> <span class="required">
+													<label class="control-label col-md-3">Room Rate<span class="required">
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<input type="text" class="form-control" name="card_number"/>
+														<input type="text" class="form-control" value = "<?=$row['room_rate'];?>" name="room_rate" disabled="true"/>
 														<span class="help-block">
 														</span>
 													</div>
-												</div>
+												</div>												
 												<div class="form-group">
-													<label class="control-label col-md-3">CVC <span class="required">
+													<label class="control-label col-md-3">Number of Person <span class="required">
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<input type="text" placeholder="" class="form-control" name="card_cvc"/>
+														<input type="text" maxlength="7" class="form-control" name="number_of_person"/>
 														<span class="help-block">
-														</span>
+													 </span>
 													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Expiration(MM/YYYY) <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" placeholder="MM/YYYY" maxlength="7" class="form-control" name="card_expiry_date"/>
-														<span class="help-block">
-														e.g 11/2020 </span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Payment Options <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<div class="checkbox-list">
-															<label>
-															<input type="checkbox" name="payment[]" value="1" data-title="Auto-Pay with this Credit Card."/> Auto-Pay with this Credit Card </label>
-															<label>
-															<input type="checkbox" name="payment[]" value="2" data-title="Email me monthly billing."/> Email me monthly billing </label>
-														</div>
-														<div id="form_payment_error">
-														</div>
-													</div>
-												</div>
+												</div>												
 											</div>
 											<div class="tab-pane" id="tab4">
 												<h3 class="block">Confirm your account</h3>
-												<h4 class="form-section">Account</h4>
+												<h4 class="form-section">Basic Info</h4>
 												<div class="form-group">
-													<label class="control-label col-md-3">Username:</label>
+													<label class="control-label col-md-3">Firstname:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="username">
+														<p class="form-control-static" data-display="firstname">
 														</p>
 													</div>
 												</div>
@@ -420,9 +395,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												<a href="javascript:;" class="btn blue button-next">
 												Continue <i class="m-icon-swapright m-icon-white"></i>
 												</a>
-												<a href="javascript:;" class="btn green button-submit">
+												<button name = "save" class="btn green button-submit">
 												Submit <i class="m-icon-swapright m-icon-white"></i>
-												</a>
+												</button>
 											</div>
 										</div>
 									</div>

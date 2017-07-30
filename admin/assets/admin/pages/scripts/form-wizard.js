@@ -87,6 +87,11 @@ var FormWizard = function () {
                         maxlength: 16,
                         required: true
                     },
+                     number_of_person: {
+                        minlength: 1,
+                        maxlength: 11,
+                        required: true
+                    },
                     card_cvc: {
                         digits: true,
                         required: true,
