@@ -1,4 +1,4 @@
-<?php 
+<?php
 $room = $_GET['id']; 
 ?>
 
@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 						</div>
 						<div class="portlet-body form">
-							<form action="#" class="form-horizontal" id="submit_form" method="POST">
+							<form method="POST" action = "add_reservation.php" class="form-horizontal" id="submit_form">
 								<div class="form-wizard">
 									<div class="form-body">
 										<ul class="nav nav-pills nav-justified steps">
@@ -212,17 +212,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="help-block">
 														Provide your city or town </span>
 													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Phone Number <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="phone_number"/>
-														<span class="help-block">
-														Provide your phone number </span>
-													</div>
-												</div>
+												</div>												
 												<div class="form-group">
 													<label class="control-label col-md-3">Gender <span class="required">
 													* </span>
@@ -254,7 +244,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													 $querym=mysqli_query($con,"select * from room WHERE room_id = '$room'")or die(mysqli_error($con));	
 													 	$row=mysqli_fetch_array($querym)
 														?>												
-														<input type="text" class="form-control" value = "Room# <?=$row['room_number'];?>" placeholder = "<?=$row['room_number'];?>" disabled/>
+														<input type="text" class="form-control" name = "room_name" value = "Room# <?=$row['room_number'];?>" placeholder = "<?=$row['room_number'];?>" disabled/>
 														<input type = "hidden" name = "room_id" value= "<?=$room?>">
 														<span class="help-block">
 														</span>
@@ -269,7 +259,27 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="help-block">
 														</span>
 													</div>
-												</div>												
+												</div>
+												<div class="form-group">
+													<label class="control-label col-md-3">Date Check In<span class="required">
+													* </span>
+													</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" value = "" name="check_in" id = "datepicker" required="" />
+														<span class="help-block">
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-md-3">Date Check Out<span class="required">
+													* </span>
+													</label>
+													<div class="col-md-4">
+														<input type="text" class="form-control" value = "" name="check_out" id = "datepicker" required="" />
+														<span class="help-block">
+														</span>
+													</div>
+												</div>											
 												<div class="form-group">
 													<label class="control-label col-md-3">Number of Person <span class="required">
 													* </span>
@@ -292,6 +302,13 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 												<div class="form-group">
+													<label class="control-label col-md-3">Lastname:</label>
+													<div class="col-md-4">
+														<p class="form-control-static" data-display="lastname">
+														</p>
+													</div>
+												</div>
+												<div class="form-group">
 													<label class="control-label col-md-3">Email:</label>
 													<div class="col-md-4">
 														<p class="form-control-static" data-display="email">
@@ -300,28 +317,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 												<h4 class="form-section">Profile</h4>
 												<div class="form-group">
-													<label class="control-label col-md-3">Fullname:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="fullname">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Gender:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="gender">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Phone:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="phone">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Address:</label>
+													<label class="control-label col-md-3">Home Address:</label>
 													<div class="col-md-4">
 														<p class="form-control-static" data-display="address">
 														</p>
@@ -333,60 +329,59 @@ License: You must have a valid license purchased only from themeforest(the above
 														<p class="form-control-static" data-display="city">
 														</p>
 													</div>
-												</div>
+												</div>												
 												<div class="form-group">
-													<label class="control-label col-md-3">Country:</label>
+													<label class="control-label col-md-3">Gender:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="country">
+														<p class="form-control-static" data-display="gender">
 														</p>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="control-label col-md-3">Remarks:</label>
+													<label class="control-label col-md-3">Phone:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="remarks">
+														<p class="form-control-static" data-display="phone_number">
 														</p>
 													</div>
 												</div>
-												<h4 class="form-section">Billing</h4>
+												<h4 class="form-section">Reservation Setup</h4>
 												<div class="form-group">
-													<label class="control-label col-md-3">Card Holder Name:</label>
+													<label class="control-label col-md-3">Room Number:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="card_name">
+														<p class="form-control-static" data-display="room_name">
 														</p>
 													</div>
-												</div>
+												</div>												
 												<div class="form-group">
-													<label class="control-label col-md-3">Card Number:</label>
+													<label class="control-label col-md-3">Room Rate:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="card_number">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">CVC:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="card_cvc">
+														<p class="form-control-static" data-display="room_rate">
 														</p>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="control-label col-md-3">Expiration:</label>
+													<label class="control-label col-md-3">Date Check In:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="card_expiry_date">
+														<p class="form-control-static" data-display="check_in">
 														</p>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="control-label col-md-3">Payment Options:</label>
+													<label class="control-label col-md-3">Date Check out:</label>
 													<div class="col-md-4">
-														<p class="form-control-static" data-display="payment">
+														<p class="form-control-static" data-display="check_out">
+														</p>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-md-3">Number of Persons:</label>
+													<div class="col-md-4">
+														<p class="form-control-static" data-display="number_of_person">
 														</p>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
 									<div class="form-actions">
 										<div class="row">
 											<div class="col-md-offset-3 col-md-9">
@@ -395,7 +390,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<a href="javascript:;" class="btn blue button-next">
 												Continue <i class="m-icon-swapright m-icon-white"></i>
 												</a>
-												<button name = "save" class="btn green button-submit">
+												<button type = "submit" class="btn green button-submit">
 												Submit <i class="m-icon-swapright m-icon-white"></i>
 												</button>
 											</div>
@@ -403,7 +398,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</form>
-						</div>
+						</div>						
 					</div>
 				</div>
 			</div>

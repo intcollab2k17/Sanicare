@@ -84,7 +84,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 		</div>
 		<div class="form-actions">			
-			<button  name = "login" class="btn btn-block green-haze pull-right">
+			<button  name = "login" class="btn btn-block btn-success pull-right">
 			Login <i class="m-icon-swapright m-icon-white"></i>
 			</button>
 		</div>

@@ -75,11 +75,17 @@ var FormWizard = function () {
                     city: {
                         required: true
                     },
-                    country: {
+                    room_name: {
+                        required: true
+                    },
+                    check_in: {
+                        required: true
+                    },
+                    check_out: {
                         required: true
                     },
                     //payment
-                    card_name: {
+                    room_rate: {
                         required: true
                     },
                     card_number: {
@@ -255,6 +261,8 @@ var FormWizard = function () {
             $('#form_wizard_1').find('.button-previous').hide();
             $('#form_wizard_1 .button-submit').click(function () {
                 alert('Finished! Hope you like it :)');
+                
+
             }).hide();
 
             //apply validation on select2 dropdown value change, this only needed for chosen dropdown integration.

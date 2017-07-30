@@ -17,6 +17,20 @@
 						<li><a href="facilities.php"><i class="icon-folder"></i>Room Facilities</a></li>						
 						<li><a href="room.php"><i class="icon-folder"></i>Room List</a></li>						
 					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-home"></i>
+					<span class="title">Reservation Details</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li><a href="reservation_pending.php"><i class="icon-folder"></i>Pending Reservation</a></li>					
+						<li><a href="reservation_accepted.php"><i class="icon-folder"></i>Accepted Reservation</a></li>					
+						<li><a href="reservation_cancel.php"><i class="icon-folder"></i>Cancelled Reservation</a></li>					
+<!-- 						<li><a href="facilities.php"><i class="icon-folder"></i>Room Facilities</a></li>						
+						<li><a href="room.php"><i class="icon-folder"></i>Room List</a></li> -->						
+					</ul>
 				</li>			
 				<li>
 					<a href="javascript:;">
