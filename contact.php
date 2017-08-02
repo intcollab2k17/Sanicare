@@ -35,26 +35,67 @@
 				</div>
 				<div class="col-md-12">
 					<div class="row">
+					<form method = "POST">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name">
+								<input type="text" class="form-control" placeholder="Name" name = "fullname" required="true">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Email">
+								<input type="email" class="form-control" placeholder="Email" name = "email" required="true">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+								<textarea name="message" class="form-control" id="" cols="30" rows="7" placeholder="Message" required="true"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary">
+								<button name = "send" value="Send Message" class="btn btn-primary">Send Message</button>
 							</div>
 						</div>
+						<?php 
+							if(isset($_POST['send'])){
+								$fullname = $_POST['fullname'];
+								$email = $_POST['email'];
+								$message = $_POST['message'];
+								mysqli_query($con,"INSERT INTO message(fullname,email,message) 
+								VALUES('$fullname','$email','$message')")or die(mysqli_error());
+								$to = "rgb2k15@gmail.com";
+								$subject = "Sea Breeze Hotel Response";
+								$message = "
+								<html>
+								<head>
+								<title>Sea Breezze Hotel Bacolod</title>
+								</head>
+								<body>
+								<p>Your Request to us has been accepted</p>
+								<table>
+								<tr>
+								<th>Firstname</th>
+								<th>Lastname</th>
+								</tr>
+								<tr>
+								<td>sadsad</td>
+								<td>Hahahahahahah</td>
+								</tr>
+								</table>
+								</body>
+								</html>
+								";
+								// Always set content-type when sending HTML email
+								$headers = "MIME-Version: 1.0" . "\r\n";
+								$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+								// More headers
+								$headers .= 'From: <webmaster@example.com>' . "\r\n";
+								$headers .= 'Cc: rgb2k16@gmail.com' . "\r\n";
+								mail($to,$subject,$message,$headers);
+									echo "<script>alert('Thank you for sending us your message')</script>";
+							}							
+						?>
+						</form>
 					</div>
 				</div>
 			</div>
