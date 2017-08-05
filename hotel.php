@@ -47,7 +47,7 @@
 					<div class="hotel-content">					
 						<div class="hotel-grid" style="background-image: url(admin/uploads/<?=$rowm['room_pic']?>);">
 							<div class="price"><small>For as low as</small><span>Php. <?=$rowm['room_rate']?>.00/per night</span></div>
-							<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+							<a class="book-now text-center" href="room/room.php?id=<?=$room_id;?>"><i class="ti-calendar"></i> Book Now</a>
 						</div>
 						<div class="desc">
 							<span class = "room-number"><a href="room/room.php?id=<?=$room_id;?>">Room# <?=$rowm['room_number']?></a><a class = "pull-right btn btn-xs btn-success" href = "room/room.php?id=<?=$room_id;?>">view more</a></span>

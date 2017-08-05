@@ -91,8 +91,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="portlet light">
 						<div class="portlet-title">
 							<div class="caption font-green-haze">
-								<i class="icon-settings font-green-haze"></i>
-								<span class="caption-subject bold uppercase"> Horizontal Form</span>
+								<i class="icon-user font-green-haze"></i>
+								<span class="caption-subject bold uppercase"> Personal Information</span>
 							</div>
 							<div class="actions">
 								<a class="btn btn-circle btn-icon-only blue" href="javascript:;">
