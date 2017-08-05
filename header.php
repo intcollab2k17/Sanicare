@@ -56,5 +56,29 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<style type="text/css">
+		#availability .a-col.action button {
+    align-items: center;
+    vertical-align: middle;
+    heght: 100%;
+    line-height: 20px;
+    padding: 14px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: #3c4146;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+#availability .a-col {
+	width: 100% !important;
+}
+#availability .a-col.action {
+	width:100% !important;
+}
+	</style>
+}
 </head>
