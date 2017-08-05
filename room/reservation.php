@@ -38,6 +38,16 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/select2/select2.css"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/clockface/css/clockface.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-colorpicker/css/colorpicker.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME STYLES -->
 <link href="../admin/assets/global/css/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
@@ -60,7 +70,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="index.html">
-				<h3>Sea Breeze Hotel</h3>
+				<h3 class = "center">Sea Breeze Hotel</h3>
 			</a>			
 		</div>
 		
@@ -75,338 +85,167 @@ License: You must have a valid license purchased only from themeforest(the above
 	</div>
 	<!-- END HEADER INNER -->
 </div>
-<div class="page-container">	
-	<div class="page-content-wrapper">
-		<div class="page-content new-row">	
-			<div class="row">
-				<div class="col-md-12">
-					<div class="portlet box blue" id="form_wizard_1">
+<div class="page-container">
+	<div class="col-md-12">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet light">
 						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Reservation Form - <span class="step-title">
-								Step 1 of 4 </span>
+							<div class="caption font-green-haze">
+								<i class="icon-settings font-green-haze"></i>
+								<span class="caption-subject bold uppercase"> Horizontal Form</span>
 							</div>
-							<div class="tools hidden-xs">
-								<a href="javascript:;" class="collapse">
+							<div class="actions">
+								<a class="btn btn-circle btn-icon-only blue" href="javascript:;">
+								<i class="icon-cloud-upload"></i>
 								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
+								<a class="btn btn-circle btn-icon-only green" href="javascript:;">
+								<i class="icon-wrench"></i>
 								</a>
-								<a href="javascript:;" class="reload">
+								<a class="btn btn-circle btn-icon-only red" href="javascript:;">
+								<i class="icon-trash"></i>
 								</a>
-								<a href="javascript:;" class="remove">
+								<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title="">
 								</a>
 							</div>
 						</div>
 						<div class="portlet-body form">
-							<form method="POST" action = "add_reservation.php" class="form-horizontal" id="submit_form">
-								<div class="form-wizard">
-									<div class="form-body">
-										<ul class="nav nav-pills nav-justified steps">
-											<li>
-												<a href="#tab1" data-toggle="tab" class="step">
-												<span class="number">
-												1 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i> Basic Info </span>
-												</a>
-											</li>
-											<li>
-												<a href="#tab2" data-toggle="tab" class="step">
-												<span class="number">
-												2 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i> Profile Setup </span>
-												</a>
-											</li>
-											<li>
-												<a href="#tab3" data-toggle="tab" class="step active">
-												<span class="number">
-												3 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i> Reservation Set up </span>
-												</a>
-											</li>
-											<li>
-												<a href="#tab4" data-toggle="tab" class="step">
-												<span class="number">
-												4 </span>
-												<span class="desc">
-												<i class="fa fa-check"></i> Confirm </span>
-												</a>
-											</li>
-										</ul>
-										<div id="bar" class="progress progress-striped" role="progressbar">
-											<div class="progress-bar progress-bar-success">
+							<form role="form" action  = "add_reservation.php" method = "POST" class="form-horizontal" id="submit_form">
+								<div class="form-body">
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Firstname</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" name = "firstname" id="form_control_1" placeholder="Enter your first name">
+											<div class="form-control-focus">
 											</div>
 										</div>
-										<div class="tab-content">
-											<div class="alert alert-danger display-none">
-												<button class="close" data-dismiss="alert"></button>
-												You have some form errors. Please check below.
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Lastname</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" name = "lastname" id="form_control_1" placeholder="Enter your last name">
+											<div class="form-control-focus">
 											</div>
-											<div class="alert alert-success display-none">
-												<button class="close" data-dismiss="alert"></button>
-												Your form validation is successful!
+										</div>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Email Address</label>
+										<div class="col-md-10">
+											<input type="email" class="form-control" name = "email" id="form_control_1" placeholder="Enter your email address">
+											<div class="form-control-focus">
 											</div>
-											<div class="tab-pane active" id="tab1">
-												<h3 class="block">Provide your account details</h3>
-												<div class="form-group">
-													<label class="control-label col-md-3">Firstname <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="firstname"/>
-														<span class="help-block">
-														Provide your Firstname </span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Lastname <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="lastname"/>
-														<span class="help-block">
-														Provide your Lastname </span>
-													</div>
-												</div>												
-												<div class="form-group">
-													<label class="control-label col-md-3">Email <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="email"/>
-														<span class="help-block">
-														Provide your email address </span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Contact Number <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="contact_number"/>
-														<span class="help-block">
-														Provide your contact number </span>
-													</div>
-												</div>
+										</div>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Contact Number</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" name="contact_number" id="form_control_1" placeholder="enter phone number or mobile number">
+											<div class="form-control-focus">
 											</div>
-											<div class="tab-pane" id="tab2">
-												<h3 class="block">Provide your profile details</h3>
-												<div class="form-group">
-													<label class="control-label col-md-3">Home Address <span class="required">
+										</div>
+									</div>										
+								
+								<div class="caption font-green-haze">
+									<i class="icon-settings font-green-haze"></i>
+									<span class="caption-subject bold uppercase"> Other Information</span>
+								</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Home Address</label>
+										<div class="col-md-10">
+											<textarea class="form-control" name="address"></textarea>
+											<div class="form-control-focus">
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">City</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" name="city" id="form_control_1" placeholder="">
+											<div class="form-control-focus">
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="control-label col-md-2">Gender <span class="required">
 													* </span>
 													</label>
 													<div class="col-md-4">
-														<textarea type="text" class="form-control" name="address"/></textarea>
-														<span class="help-block">
-														Provide your complete address </span>
-													</div>
-												</div>
-													<div class="form-group">
-													<label class="control-label col-md-3">City/Town <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" name="city"/>
-														<span class="help-block">
-														Provide your city or town </span>
-													</div>
-												</div>												
-												<div class="form-group">
-													<label class="control-label col-md-3">Gender <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<div class="radio-list">
-															<label>
-															<input type="radio" name="gender" value="M" data-title="Male"/>
-															Male </label>
-															<label>
-															<input type="radio" name="gender" value="F" data-title="Female"/>
-															Female </label>
-														</div>
+														<select name = "gender" class= "form-control">
+															<option></option>
+															<option>Male</option>
+															<option>Female</option>
+														</select>
 														<div id="form_gender_error">
 														</div>
 													</div>
-												</div>												
-											
-												
-											</div>
-											<div class="tab-pane" id="tab3">
-												<h3 class="block">Provide your billing and credit card details</h3>
-												<div class="form-group">
-													<label class="control-label col-md-3">Selected Hotel <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-													<?php include 'dbcon.php';
-													 $querym=mysqli_query($con,"select * from room WHERE room_id = '$room'")or die(mysqli_error($con));	
+									</div>
+									<div class="caption font-green-haze">
+									<i class="icon-settings font-green-haze"></i>
+									<span class="caption-subject bold uppercase"> Reservation Information</span>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Selected Hotel</label>
+										<div class="col-md-10">
+											<?php include 'dbcon.php';
+											$querym=mysqli_query($con,"select * from room WHERE room_id = '$room'")or die(mysqli_error($con));	
 													 	$row=mysqli_fetch_array($querym)
 														?>												
 														<input type="text" class="form-control" name = "room_name" value = "Room# <?=$row['room_number'];?>" placeholder = "<?=$row['room_number'];?>" disabled/>
 														<input type = "hidden" name = "room_id" value= "<?=$room?>">
-														<span class="help-block">
-														</span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Room Rate<span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" value = "<?=$row['room_rate'];?>" name="room_rate" disabled="true"/>
-														<span class="help-block">
-														</span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Date Check In<span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" value = "" name="check_in" id = "datepicker" required="" />
-														<span class="help-block">
-														</span>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Date Check Out<span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" class="form-control" value = "" name="check_out" id = "datepicker" required="" />
-														<span class="help-block">
-														</span>
-													</div>
-												</div>											
-												<div class="form-group">
-													<label class="control-label col-md-3">Number of Person <span class="required">
-													* </span>
-													</label>
-													<div class="col-md-4">
-														<input type="text" maxlength="7" class="form-control" name="number_of_person"/>
-														<span class="help-block">
-													 </span>
-													</div>
-												</div>												
-											</div>
-											<div class="tab-pane" id="tab4">
-												<h3 class="block">Confirm your account</h3>
-												<h4 class="form-section">Basic Info</h4>
-												<div class="form-group">
-													<label class="control-label col-md-3">Firstname:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="firstname">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Lastname:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="lastname">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Email:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="email">
-														</p>
-													</div>
-												</div>
-												<h4 class="form-section">Profile</h4>
-												<div class="form-group">
-													<label class="control-label col-md-3">Home Address:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="address">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">City/Town:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="city">
-														</p>
-													</div>
-												</div>												
-												<div class="form-group">
-													<label class="control-label col-md-3">Gender:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="gender">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Phone:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="phone_number">
-														</p>
-													</div>
-												</div>
-												<h4 class="form-section">Reservation Setup</h4>
-												<div class="form-group">
-													<label class="control-label col-md-3">Room Number:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="room_name">
-														</p>
-													</div>
-												</div>												
-												<div class="form-group">
-													<label class="control-label col-md-3">Room Rate:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="room_rate">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Date Check In:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="check_in">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Date Check out:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="check_out">
-														</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label col-md-3">Number of Persons:</label>
-													<div class="col-md-4">
-														<p class="form-control-static" data-display="number_of_person">
-														</p>
-													</div>
-												</div>
+											<div class="form-control-focus">
 											</div>
 										</div>
-									<div class="form-actions">
-										<div class="row">
-											<div class="col-md-offset-3 col-md-9">
-												<a href="javascript:;" class="btn default button-previous">
-												<i class="m-icon-swapleft"></i> Back </a>
-												<a href="javascript:;" class="btn blue button-next">
-												Continue <i class="m-icon-swapright m-icon-white"></i>
-												</a>
-												<button type = "submit" class="btn green button-submit">
-												Submit <i class="m-icon-swapright m-icon-white"></i>
-												</button>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Room Rate</label>
+										<div class="col-md-10">
+											Php. <input type="text" class="form-control" value= "<?=$row['room_rate'];?>" name="room_rate" id="form_control_1" placeholder="">
+											<div class="form-control-focus">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-2">Date Check In</label>
+										<div class="col-md-3">
+											<input class="form-control form-control-inline input-medium date-picker" name = "check_in" size="16" type="text" value="">
+											<span class="help-block">
+											Select date </span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-2">Date Check out</label>
+										<div class="col-md-3">
+											<input class="form-control form-control-inline input-medium date-picker" name = "check_out" size="16" type="text" value="">
+											<span class="help-block">
+											Select date </span>
+										</div>
+									</div>
+									<div class="form-group form-md-line-input">
+										<label class="col-md-2 control-label" for="form_control_1">Number of Person</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" name="number_of_person" id="form_control_1" placeholder="">
+											<div class="form-control-focus">
 											</div>
 										</div>
 									</div>
 								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-2 col-md-10">
+											<button type="button" class="btn default">Cancel</button>
+											<button type="submit" class="btn blue">Submit</button>
+										</div>
+									</div>
+								</div>
 							</form>
-						</div>						
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- END PAGE CONTENT-->
-		</div>
-	</div>
-	<!-- END CONTENT -->
+	
 </div>
+			<!-- END PAGE CONTENT-->
+		
+	
+	<!-- END CONTENT -->
 <script src="../admin/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="../admin/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
@@ -418,31 +257,35 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="../admin/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="../admin/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <script src="../admin/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
-<!-- BEGIN PAGE LEVEL PLUGINS -->
+
 <script type="text/javascript" src="../admin/assets/global/plugins/jquery-validation/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="../admin/assets/global/plugins/jquery-validation/js/additional-methods.min.js"></script>
 <script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
-<!-- END PAGE LEVEL PLUGINS -->
+<!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script type="text/javascript" src="../admin/assets/global/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/clockface/js/clockface.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script type="text/javascript" src="../admin/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="../admin/assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="../admin/assets/admin/layout4/scripts/layout.js" type="text/javascript"></script>
 <script src="../admin/assets/admin/layout4/scripts/demo.js" type="text/javascript"></script>
+<script src="../admin/assets/admin/pages/scripts/components-pickers.js"></script>
 <script src="../admin/assets/admin/pages/scripts/form-wizard.js"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
-jQuery(document).ready(function() {       
-   // initiate layout and plugins
-   Metronic.init(); // init metronic core components
+        jQuery(document).ready(function() {       
+           // initiate layout and plugins
+           Metronic.init(); // init metronic core components
 Layout.init(); // init current layout
 Demo.init(); // init demo features
-   FormWizard.init();
-});
-</script>
-<!-- END JAVASCRIPTS -->
-</body>
+           ComponentsPickers.init();
+        });   
+    </script>
 <!-- END BODY -->
 </html>

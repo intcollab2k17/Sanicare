@@ -46,6 +46,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="../admin/assets//admin/layout4/css/layout.css" rel="stylesheet" type="text/css"/>
 <link id="style_color" href="../admin/assets//admin/layout4/css/themes/light.css" rel="stylesheet" type="text/css"/>
 <link href="../admin/assets//admin/layout4/css/custom.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/clockface/css/clockface.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-colorpicker/css/colorpicker.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+<link rel="stylesheet" type="text/css" href="../admin/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.cs
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
