@@ -42,14 +42,17 @@
 								<th>Lastname</th>						
 								<th>Email</th>						
 								<th>Room Number</th>
-								<th>Room Number</th>
-								<th>Status</th>
+								<th>Balance</th>
+								
 							</tr>
 							</thead>
 							<tbody>
 								<?php
 						
-							$querym=mysqli_query($con,"select * from reservation LEFT JOIN room ON room.room_id = reservation.room_id WHERE reservation_status = 'Finished'")or die(mysqli_error($con));
+							$querym=mysqli_query($con,"select * from reservation
+							 LEFT JOIN room ON room.room_id = reservation.room_id
+							 LEFT JOIN sales ON sales.sales_id = reservation.reservation_id
+							  WHERE reservation_status = 'Finished'")or die(mysqli_error($con));
 								while ($row=mysqli_fetch_array($querym)){
 								$reservation_id = $row['reservation_id'];							
 							?>  	
@@ -60,8 +63,8 @@
 								<td><?= $row['lastname'];?></td>									
 								<td><?= $row['email'];?></td>		
 								<td>Room# <?= $row['room_number'];?></td>							
-								<td>Room# <?= $row['room_number'];?></td>							
-								<td>
+								<td><?= $row['sales_amount'];?></td>							
+								<!-- <td>
 									<form method = "POST" action = "send_email.php">
 										<input type = "hidden" name = "firstname" value = "<?=$row['firstname'];?>">
 										<a href="#update<?=$row['reservation_id']?>" role="button" class="btn btn-primary" data-target = "#update<?=$row['reservation_id'];?>" data-toggle="modal">
@@ -70,7 +73,7 @@
 									</form>
 
 									
-								</td>
+								</td> -->
 							</tr>
 
 							<div id="update<?=$row['reservation_id'];?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

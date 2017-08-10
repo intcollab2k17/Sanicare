@@ -65,12 +65,13 @@
 								<td>
 									<form method = "POST" action = "send_email.php">
 										<input type = "hidden" name = "firstname" value = "<?=$row['firstname'];?>">
-										<a href="#update<?=$row['reservation_id']?>" role="button" class="btn btn-primary" data-target = "#update<?=$row['reservation_id'];?>" data-toggle="modal">
-											<i class = "fa fa-pencil"></i>
+										<a href="#update<?=$row['reservation_id']?>" role="button" class="btn btn-danger" data-target = "#update<?=$row['reservation_id'];?>" data-toggle="modal">
+											<i class = "fa fa-pencil"></i> cancel reservation
 										</a>
 									</form>
-
-									
+									<a href="#finish<?=$row['reservation_id']?>" role="button" class="btn btn-success" data-target = "#finish<?=$row['reservation_id'];?>" data-toggle="modal">
+											<i class = "fa fa-pencil"></i> Finished reservation
+										</a>
 								</td>
 							</tr>
 
@@ -82,12 +83,45 @@
 										</div>
 										<form method="POST" action = "update_status.php">
 										<div class="modal-body">
+
+
+										<center><p class = "">Are you sure you want to cancel reservation?</p></center>
 											<input type = "hidden" name = "reservation_id" value = "<?=$row['reservation_id'];?>">
 											<input type = "hidden" name = "firstname" value = "<?=$row['firstname'];?>">
 											<input type = "hidden" name = "lastname" value = "<?=$row['lastname'];?>">
-											<input type = "hidden" name = "email" value = "<?=$row['email'];?>">						
+											<input type = "hidden" name = "email" value = "<?=$row['email'];?>">
 											<input type = "hidden" name = "reservation_status" value = "Cancel">
-											<button name = "update" class = "btn btn-block btn-danger">Cance Reservation</button>
+											
+											<button name = "update" class = "btn btn-block btn-danger">Cancel Reservation</button>
+										</div>
+										<div class="modal-footer">
+											
+										</div>
+										</form>
+									</div>
+								</div>
+							</div>
+
+							<div id="finish<?=$row['reservation_id'];?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">										
+											<h4 class="modal-title">Edit Status</h4>
+										</div>
+										<form method="POST" action = "finished_status.php" class = "form-horizontal">
+										<div class="modal-body">
+										<center><p class = "">Finished Reservation?</p></center>
+											<input type = "hidden" name = "reservation_id" value = "<?=$row['reservation_id'];?>">
+											<input type = "hidden" name = "firstname" value = "<?=$row['firstname'];?>">
+											<input type = "hidden" name = "lastname" value = "<?=$row['lastname'];?>">
+											<input type = "hidden" name = "email" value = "<?=$row['email'];?>">
+											<input type = "hidden" name = "reservation_status" value = "Finished">
+											<div class = "form-group">
+												<input class = "form-control" name = "sales_amount" type = "text" required>
+											</div>
+
+											
+											<button name = "update" class = "btn btn-block btn-success">Finished Reservation</button>
 										</div>
 										<div class="modal-footer">
 											

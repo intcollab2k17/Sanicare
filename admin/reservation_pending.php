@@ -85,11 +85,10 @@
 											<input type = "hidden" name = "firstname" value = "<?=$row['firstname'];?>">
 											<input type = "hidden" name = "lastname" value = "<?=$row['lastname'];?>">
 											<input type = "hidden" name = "email" value = "<?=$row['email'];?>">						
-											<select class = "form-control" name = "reservation_status">
-												<option><?=$row['reservation_status'];?></option>
-												<option></option>
+											<select class = "form-control" name = "reservation_status">	
+												<option selected="true" disabled="disabled">Choose Status</option>    
 												<option>Accepted</option>
-												<option>Declined</option>
+												<option>Cancel</option>
 											</select>
 
 										</div>

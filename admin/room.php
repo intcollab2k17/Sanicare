@@ -51,7 +51,7 @@
 								    $query=mysqli_query($con,"select * from room order by room_id")or die(mysqli_error());
 								      while ($row=mysqli_fetch_array($query)){
 								        $room_id=$row['room_id'];							       						       
-								?>
+							?>
 							<tr class="odd gradeX">
 								
 								

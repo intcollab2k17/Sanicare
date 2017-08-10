@@ -7,13 +7,15 @@ include('dbcon.php');
 	 $firstname = $_POST['firstname'];
 	 $lastname = $_POST['lastname'];
 	 $email = $_POST['email'];
-	 $reservation_status = $_POST['reservation_status']; 
+	 $reservation_status = $_POST['reservation_status'];	 
+	 $sales_amount = $_POST['sales_amount'];	 
+	 $date = date('Y-d-m');
 	 
 	 mysqli_query($con,"UPDATE reservation SET reservation_status='$reservation_status' where reservation_id='$id'")
 	 or die(mysqli_error($con)); 
 
-	 
 
+		 mysqli_query($con,"INSERT INTO sales(sales_amount,reservation_id,payment_date)VALUES('$sales_amount','$id','$date')")or die(mysqli_error($con));
 
 $to = $email;
 $subject = "Sea Breeze Hotel Response";
@@ -49,7 +51,7 @@ $headers .= 'Cc: rgb2k16@gmail.com' . "\r\n";
 mail($to,$subject,$message,$headers);
 
 echo "<script type='text/javascript'>alert('Successfully Updated Sending Email to client');</script>";
-echo "<script>document.location='reservation_pending.php'</script>";
+echo "<script>document.location='reservation_accepted.php'</script>";
 }
 
  ?>
