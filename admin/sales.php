@@ -56,18 +56,21 @@
               <tr>                
                 <th>Sales ID</th>
                 <th>Payment</th>
+                <th>Date</th>
                 
 
               </tr>
               </thead>
               <tbody>
-               <?php  
+                  <?php  
                      while($row = mysqli_fetch_array($result))  
                      {  
                      ?>                
                 <tr class="odd gradeX">
                 <td><?= $row['sales_id'];?></td>
-                <td><?= $row['sales_amount'];?></td>  
+                <td><?= $row['sales_amount'];?></td> 
+                <td><?= $row['payment_date'];?></td> 
+
               </tr>
               <?php } ?>
               </tbody>

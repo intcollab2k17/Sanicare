@@ -14,6 +14,7 @@
                 <tr>  
                      <th width="5%">ID</th>  
                      <th width="30%">Sales Amount</th>  
+                     <th width="30%">Payment Date</th>  
                                          
                 </tr>  
       ';  
@@ -25,6 +26,7 @@
                      <tr>  
                           <td>'. $row["sales_id"] .'</td>  
                           <td>'. $row["sales_amount"] .'</td>
+                          <td>'. $row["payment_date"] .'</td>
                      </tr>  
                 ';  
            }  
