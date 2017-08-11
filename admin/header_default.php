@@ -25,6 +25,10 @@
 <link href="assets//admin/layout4/css/layout.css" rel="stylesheet" type="text/css"/>
 <link id="style_color" href="assets//admin/layout4/css/themes/light.css" rel="stylesheet" type="text/css"/>
 <link href="assets//admin/layout4/css/custom.css" rel="stylesheet" type="text/css"/>
+
+
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
 	
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>

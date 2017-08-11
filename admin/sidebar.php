@@ -44,7 +44,7 @@
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
-						<li><a href="reservation_pending.php"><i class="fa fa-money"></i>Sales</a></li>	
+						<li><a href="sales.php"><i class="fa fa-money"></i>Sales</a></li>	
 						<li><a href="reservation_accepted.php"><i class="fa fa-file-zip-o"></i>Reservation</a></li>
 					</ul>
 				</li>

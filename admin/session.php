@@ -11,6 +11,6 @@ $session_id=$_SESSION['id'];
 
 $user_query = mysqli_query($con,"select * from user where user_id = '$session_id'")or die(mysql_error());
 $user_row = mysqli_fetch_array($user_query);
-$user_username = $user_row['name'];
+/*$user_username = $user_row['fullname'];*/
 
 ?>
