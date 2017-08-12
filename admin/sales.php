@@ -56,8 +56,6 @@
               <tr>                
                 <th>Sales ID</th>
                 <th>Payment</th>
-                
-
               </tr>
               </thead>
               <tbody>
