@@ -3,13 +3,13 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="copyright">
-						<p><small>&copy; 2016 Free HTML5 Template. <br> All Rights Reserved. <br>
-						Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> <br> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+						<p><small>&copy; 2017 Sea Breeze Hotel <br> All Rights Reserved. <br>
+						Designed by <a href="http://freehtml5.co" target="_blank">CHMSC</a> <br></small></p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="row">
-						<div class="col-md-3">
+						<!-- <div class="col-md-3">
 							<h3>Company</h3>
 							<ul class="link">
 								<li><a href="#">About Us</a></li>
@@ -17,7 +17,7 @@
 								<li><a href="#">Customer Care</a></li>
 								<li><a href="#">Contact Us</a></li>
 							</ul>
-						</div>
+						</div> -->
 						<!-- <div class="col-md-3">
 							<h3>Our Facilities</h3>
 							<ul class="link">
