@@ -1,4 +1,12 @@
 <?php include 'header.php';?>
+<style type="text/css">
+	
+#tabs .tabs-nav > a{
+	width:25%;
+}
+}
+
+</style>
 <body>
 	<div id="fh5co-wrapper">
 	<div id="fh5co-page">
@@ -106,16 +114,7 @@
 						<i class="flaticon-cup icon"></i>
 						<span>Bar</span>
 					</a>
-					<a href="#" data-tab="tab3">
 					
-						<i class="flaticon-car icon"></i>
-						<span>Pick-up</span>
-					</a>
-					<a href="#" data-tab="tab4">
-						
-						<i class="flaticon-swimming icon"></i>
-						<span>Swimming Pool</span>
-					</a>
 					<a href="#" data-tab="tab5">
 						
 						<i class="flaticon-massage icon"></i>
@@ -166,25 +165,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="tab-content" data-tab-content="tab3">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-6">
-									<img src="images/tab_img_3.jpg" class="img-responsive" alt="Image">
-								</div>
-								<div class="col-md-6">
-									<span class="super-heading-sm">World Class</span>
-									<h3 class="heading">Pick Up</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt, quae rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis perferendis earum fugit impedit molestias animi vitae.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.</p>
-									<p class="service-hour">
-										<span>Service Hours</span>
-										<strong>7:30 AM - 8:00 PM</strong>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 					<div class="tab-content" data-tab-content="tab4">
 						<div class="container">
 							<div class="row">
@@ -208,7 +189,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6">
-									<img src="images/tab_img_5.jpg" class="img-responsive" alt="Image">
+									<img src="images/tab_img_3.jpg" class="img-responsive" alt="Image">
 								</div>
 								<div class="col-md-6">
 									<span class="super-heading-sm">World Class</span>
