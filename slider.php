@@ -8,10 +8,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>SUPERB ROOM</span></p>
-		   						<h2>Reserve Room for Family Vacation</h2>
-			   					<p>
-			   						<a href="#" class="btn btn-primary btn-lg">Book Now</a>
-			   					</p>
+		   						<h2>Reserve Room for Family Vacation</h2>			   					
 		   					</div>
 		   				</div>
 		   			</div>
@@ -24,10 +21,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>RESTAURANT</span></p>
-		   						<h2>Great Food To Satisfy Guests</h2>
-			   					<p>
-			   						<a href="#" class="btn btn-primary btn-lg">Book Now</a>
-			   					</p>
+		   						<h2>Great Food To Satisfy Guests</h2>			   					
 		   					</div>
 		   				</div>
 		   			</div>
@@ -41,10 +35,7 @@
 		   				<div class="slider-text-inner js-fullheight">
 		   					<div class="desc">
 		   						<p><span>Amenities</span></p>
-		   						<h2>A Best Place To Enjoy Relax</h2>
-			   					<p>
-			   						<a href="#" class="btn btn-primary btn-lg">Book Now</a>
-			   					</p>
+		   						<h2>A Best Place To Enjoy Relax</h2>			   					
 		   					</div>
 		   				</div>
 		   			</div>

@@ -117,7 +117,8 @@
 											<input type = "hidden" name = "email" value = "<?=$row['email'];?>">
 											<input type = "hidden" name = "reservation_status" value = "Finished">
 											<div class = "form-group">
-												<input class = "form-control" name = "sales_amount" type = "text" required>
+											Php.
+												<input class = "form-control" id = "txtboxToFilter" name = "sales_amount" type = "text" required placeholder = "Enter Amount to be pay ">
 											</div>
 
 											
@@ -155,7 +156,30 @@
 		<i class="icon-arrow-up"></i>
 	</div>
 </div>
+
+
 <?php include 'script.php';?>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+    $("#txtboxToFilter").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+});
+</script>
+
 </body>
 <!-- END BODY -->
 </html>

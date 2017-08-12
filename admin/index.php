@@ -50,7 +50,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="index.php">
-	<img src="assets/admin/layout4/img/logo-big.png" alt=""/>
+		<h1 style = "color:white;">SEA BREEZE HOTEL</h1>
 	</a>
 </div>
 <!-- END LOGO -->

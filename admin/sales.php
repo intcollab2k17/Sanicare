@@ -5,6 +5,14 @@
  $result = mysqli_query($connect, $query);  
  ?> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<style type="text/css">
+  .col-lg-12.col-md-12.col-sm-12.col-xs-12 {
+    position: relative;
+    top: 20px;
+}
+
+  
+</style>
 <body class="page-md page-header-fixed page-sidebar-closed-hide-logo ">
 <?php include 'header_top.php';?>
 <div class="clearfix">
@@ -24,15 +32,20 @@
         </div>
       </div>      
       <div class="row">
-       <div class="col-md-3">  
-                     <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
-       </div>
-       <div class="col-md-3">  
-                     <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
-       </div>
-       <div class="col-md-5">  
-                     <input type="button" name="filter" id="filter" value="Filter" class="btn btn-info" />  
+              <div class = "page-content-wrapper">
+                  <div class = "form-group">
+                     <div class="col-md-3">
+                               <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
+                     </div>
+                      <div class="col-md-3">  
+                               <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
+                      </div>
+                      <div class="col-md-3">  
+                               <input type="button" name="filter" id="filter" value="Filter" class="btn btn-info" />  
+                      </div> 
+                 </div> 
                 </div> 
+      </div> 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         
           <div class="portlet box grey-cascade">
