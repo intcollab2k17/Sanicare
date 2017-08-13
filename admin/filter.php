@@ -7,24 +7,6 @@
       $query = " SELECT * FROM sales WHERE payment_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'"; 
 
       $result = mysqli_query($connect, $query); 
-/*
-    $sql = "SELECT sum(sales_amount) as total FROM sales WHERE payment_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'";
-     
-     $result2 = mysqli_query($sql);
-
-     while($row4=mysqli_fetch_assoc($result2)){
-       $output2 .='<tr>
-                    <td>Total</td>
-                    <td>'. $row4['total'] .'</td>
-                    <td>&nbsp;</td>
-                  </tr>';
-         }
-
-*/
-
-
-
-
       $output .= '  
            <table class="table table-bordered" id = "sample_2">  
                 <tr>  
@@ -91,36 +73,4 @@
       echo $output2;
 
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  ?>

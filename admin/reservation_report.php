@@ -1,7 +1,7 @@
 <?php include 'header_default.php';?>
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "hotel");  
- $query = "SELECT * FROM sales ORDER BY sales_id desc";  
+ $query = "SELECT * FROM reservation LEFT JOIN room ON reservation.room_id = room.room_id  ORDER BY reservation_id desc";  
  $result = mysqli_query($connect, $query);  
  ?> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
@@ -28,7 +28,7 @@
       <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-          <h1>Sales Report  <small></small></h1>
+          <h1>Reservation Report  <small></small></h1>
         </div>
       </div>      
       <div class="row">
@@ -67,9 +67,9 @@
               <table class="table table-striped table-bordered table-hover" id="sample_2">
               <thead>               
               <tr>                
-                <th>Sales ID</th>
-                <th>Payment</th>
-                <th>Date</th>
+                <th>Reservation Code</th>
+                <th>Room Number</th>
+                <th>Reservation Date</th>
 
               </tr>
               </thead>
@@ -79,9 +79,9 @@
                      {  
                      ?>                
                 <tr class="odd gradeX">
-                <td><?= $row['sales_id'];?></td>
-                <td><?= $row['sales_amount'];?></td> 
-                <td><?= $row['payment_date'];?></td> 
+                <td><?= $row['r_code'];?></td>
+                <td>Room# <?= $row['room_number'];?></td> 
+                <td><?= date("F d, Y", strtotime($row['date_reserved']));?></td> 
 
               </tr>
               <?php } ?>
@@ -101,9 +101,6 @@
 <!-- END CONTAINER -->
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
-  <div class="page-footer-inner">
-     2014 &copy; Metronic by keenthemes.
-  </div>
   <div class="scroll-to-top">
     <i class="icon-arrow-up"></i>
   </div>
@@ -123,7 +120,7 @@
                 if(from_date != '' && to_date != '')  
                 {  
                      $.ajax({  
-                          url:"filter.php",  
+                          url:"filter_reservation.php",  
                           method:"POST",  
                           data:{from_date:from_date, to_date:to_date},  
                           success:function(data)  
