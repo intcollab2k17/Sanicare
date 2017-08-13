@@ -111,7 +111,7 @@
 <script>  
       $(document).ready(function(){  
            $.datepicker.setDefaults({  
-                dateFormat: 'yy-dd-mm'   
+                dateFormat: 'yy-mm-dd'   
            });  
            $(function(){  
                 $("#from_date").datepicker();  

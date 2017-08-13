@@ -1,7 +1,7 @@
 <?php include 'header_default.php';?>
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "hotel");  
- $query = "SELECT * FROM reservation LEFT JOIN room ON reservation.room_id = room.room_id  ORDER BY reservation_id desc";  
+ $query = "SELECT * FROM reservation LEFT JOIN room ON reservation.room_id = room.room_id  ORDER BY date_reserved desc";  
  $result = mysqli_query($connect, $query);  
  ?> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
@@ -66,7 +66,8 @@
             <div id = "order_table">          
               <table class="table table-striped table-bordered table-hover" id="sample_2">
               <thead>               
-              <tr>                
+              <tr>
+                <th>Full name</th>
                 <th>Reservation Code</th>
                 <th>Room Number</th>
                 <th>Reservation Date</th>
@@ -79,6 +80,7 @@
                      {  
                      ?>                
                 <tr class="odd gradeX">
+                <td><?= $row['firstname']." ".$row['lastname'];?></td>
                 <td><?= $row['r_code'];?></td>
                 <td>Room# <?= $row['room_number'];?></td> 
                 <td><?= $row['date_reserved'];?></td> 

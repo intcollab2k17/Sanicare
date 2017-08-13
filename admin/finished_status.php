@@ -9,13 +9,14 @@ include('dbcon.php');
 	 $email = $_POST['email'];
 	 $reservation_status = $_POST['reservation_status'];	 
 	 $sales_amount = $_POST['sales_amount'];	 
-	 $date = date('Y-d-m');
+	
+	 $date2 = date('Y-m-d');
 	 
 	 mysqli_query($con,"UPDATE reservation SET reservation_status='$reservation_status' where reservation_id='$id'")
 	 or die(mysqli_error($con)); 
 
 
-		 mysqli_query($con,"INSERT INTO sales(sales_amount,reservation_id,payment_date)VALUES('$sales_amount','$id','$date')")or die(mysqli_error($con));
+		 mysqli_query($con,"INSERT INTO sales(sales_amount,reservation_id,payment_date)VALUES('$sales_amount','$id','$date2')")or die(mysqli_error($con));
 
 $to = $email;
 $subject = "Sea Breeze Hotel Response";
