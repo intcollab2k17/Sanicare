@@ -38,6 +38,7 @@
 							<table class="table table-striped table-bordered table-hover" id="sample_2">
 							<thead>							  
 							<tr>								
+								<th>Code</th>
 								<th>Firstname</th>
 								<th>Lastname</th>						
 								<th>Email</th>						
@@ -59,6 +60,7 @@
 								<tr class="odd gradeX">
 								
 								
+								<td><?= $row['r_code'];?></td>
 								<td><?= $row['firstname'];?></td>
 								<td><?= $row['lastname'];?></td>									
 								<td><?= $row['email'];?></td>		

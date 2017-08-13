@@ -198,7 +198,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group form-md-line-input">
 										<label class="col-md-2 control-label" for="form_control_1">Room Rate</label>
 										<div class="col-md-10">
-											Php. <input type="text" class="form-control" value= "<?=$row['room_rate'];?>" name="room_rate" id="form_control_1" placeholder="">
+											Php. <input type="text" class="form-control" value= "<?=$row['room_rate'];?>" name="room_rate" id="form_control_1" placeholder="" disabled>
 											<div class="form-control-focus">
 											</div>
 										</div>

@@ -81,7 +81,7 @@
                 <tr class="odd gradeX">
                 <td><?= $row['r_code'];?></td>
                 <td>Room# <?= $row['room_number'];?></td> 
-                <td><?= date("F d, Y", strtotime($row['date_reserved']));?></td> 
+                <td><?= $row['date_reserved'];?></td> 
 
               </tr>
               <?php } ?>
@@ -108,7 +108,7 @@
 <script>  
       $(document).ready(function(){  
            $.datepicker.setDefaults({  
-                dateFormat: 'yy-dd-mm'   
+                dateFormat: 'yy-mm-dd'   
            });  
            $(function(){  
                 $("#from_date").datepicker();  
