@@ -33,7 +33,7 @@
 					</a>
 					<ul class="sub-menu">
 						<li><a href="room_category.php"><i class="icon-folder"></i>Room Category</a></li>					
-						<li><a href="facilities.php"><i class="icon-folder"></i>Room Facilities</a></li>						
+						<!-- <li><a href="facilities.php"><i class="icon-folder"></i>Room Facilities</a></li>	 -->					
 						<li><a href="room.php"><i class="icon-folder"></i>Room List</a></li>						
 					</ul>
 				</li>				
@@ -45,7 +45,7 @@
 					</a>
 					<ul class="sub-menu">
 						<li><a href="sales.php"><i class="fa fa-money"></i>Sales</a></li>	
-						<li><a href="reservation_accepted.php"><i class="fa fa-file-zip-o"></i>Reservation</a></li>
+						<li><a href="reservation_report.php"><i class="fa fa-file-zip-o"></i>Reservation</a></li>
 					</ul>
 				</li>
 				<li><a href="messages.php"><i class="icon-envelope"></i>Messages</a></li>	

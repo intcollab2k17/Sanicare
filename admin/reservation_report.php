@@ -5,14 +5,6 @@
  $result = mysqli_query($connect, $query);  
  ?> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
-<style type="text/css">
-  .col-lg-12.col-md-12.col-sm-12.col-xs-12 {
-    position: relative;
-    top: 20px;
-}
-
-  
-</style>
 <body class="page-md page-header-fixed page-sidebar-closed-hide-logo ">
 <?php include 'header_top.php';?>
 <div class="clearfix">
@@ -32,21 +24,16 @@
         </div>
       </div>      
       <div class="row">
-              <div class = "page-content-wrapper">
-                  <div class = "form-group">
-                     <div class="col-md-3">
-                               <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
-                     </div>
-                      <div class="col-md-3">  
-                               <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
-                      </div>
-                      <div class="col-md-3">  
-                               <input type="button" name="filter" id="filter" value="Filter" class="btn btn-info" />  
-                      </div> 
-                 </div> 
+       <div class="col-md-3">  
+                     <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
+       </div>
+       <div class="col-md-3">  
+                     <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
+       </div>
+       <div class="col-md-5">  
+                     <input type="button" name="filter" id="filter" value="Filter" class="btn btn-info" />  
                 </div> 
-      </div> 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         
           <div class="portlet box grey-cascade">
             <div class="portlet-title">
@@ -69,24 +56,16 @@
               <tr>                
                 <th>Sales ID</th>
                 <th>Payment</th>
-<<<<<<< HEAD
-                <th>Date</th>
-                
-
-=======
->>>>>>> 9ad900c6749c405360dde549404203d8b5aa277d
               </tr>
               </thead>
               <tbody>
-                  <?php  
+               <?php  
                      while($row = mysqli_fetch_array($result))  
                      {  
                      ?>                
                 <tr class="odd gradeX">
                 <td><?= $row['sales_id'];?></td>
-                <td><?= $row['sales_amount'];?></td> 
-                <td><?= $row['payment_date'];?></td> 
-
+                <td><?= $row['sales_amount'];?></td>  
               </tr>
               <?php } ?>
               </tbody>
