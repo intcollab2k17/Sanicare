@@ -26,9 +26,9 @@ $date = date("Y-m-d");
 		$i++;
 	}
 	
-	mysqli_query($con,"INSERT INTO reservation(firstname,lastname,email,contact_number,address,city,gender,room_id,check_in,check_out,room_rate,number_of_person,r_code,date_reserved,reservation_status)VALUES('$firstname','$lastname','$email', '$contact_number', '$address', '$city','$gender','$room_id','$check_in','$check_out','$room_rate','$number_of_person','$code','$date','Pending')")or die(mysqli_error($con));  
+	mysqli_query($con,"INSERT INTO reservation(firstname,lastname,email,contact_number,address,city,gender,room_id,room_rate,check_in,check_out,number_of_person,r_code,date_reserved,reservation_status)VALUES('$firstname','$lastname','$email', '$contact_number', '$address', '$city','$gender','$room_id','$room_rate','$check_in','$check_out','$number_of_person','$code','$date','Pending')")or die(mysqli_error($con));  
 
-	echo "<script>window.location = '../index.php'</script>";
+
 
 ?>
 

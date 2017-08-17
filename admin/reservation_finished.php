@@ -52,7 +52,7 @@
 						
 							$querym=mysqli_query($con,"select * from reservation
 							 LEFT JOIN room ON room.room_id = reservation.room_id
-							 LEFT JOIN sales ON sales.sales_id = reservation.reservation_id
+							 LEFT JOIN sales ON sales.reservation_id = sales.sales_id
 							  WHERE reservation_status = 'Finished'")or die(mysqli_error($con));
 								while ($row=mysqli_fetch_array($querym)){
 								$reservation_id = $row['reservation_id'];							

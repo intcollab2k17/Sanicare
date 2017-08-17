@@ -15,7 +15,6 @@ include('dbcon.php');
 
 $to = $email;
 $subject = "Sea Breeze Hotel Response";
-
 $message = "
 <html>
 <head>
@@ -27,12 +26,14 @@ $message = "
 <tr>
 <th>Firstname</th>
 <th>Lastname</th>
+<th>Email Address</th>
 <th>Reservation Code</th>
 </tr>
 <tr>
 <td>".$firstname."</td>
 <td>".$lastname."</td>
 <td>".$r_code."</td>
+<td>".$email."</td>
 </tr>
 </table>
 </body>
@@ -45,7 +46,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
 $headers .= 'From: <webmaster@example.com>' . "\r\n";
-$headers .= 'Cc: ' . "\r\n";
+$headers .= 'Cc: seabreezebacolodcity@gmail.com' . "\r\n";
 mail($to,$subject,$message,$headers);
 
 echo "<script type='text/javascript'>alert('Successfully Updated Sending Email to client');</script>";
