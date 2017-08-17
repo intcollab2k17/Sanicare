@@ -27,9 +27,41 @@ $date = date("Y-m-d");
 	}
 	
 	mysqli_query($con,"INSERT INTO reservation(firstname,lastname,email,contact_number,address,city,gender,room_id,room_rate,check_in,check_out,number_of_person,r_code,date_reserved,reservation_status)VALUES('$firstname','$lastname','$email', '$contact_number', '$address', '$city','$gender','$room_id','$room_rate','$check_in','$check_out','$number_of_person','$code','$date','Pending')")or die(mysqli_error($con));  
+$to = $email;
+$subject = "Sea Breeze Hotel Response";
+$message = "
+<html>
+<head>
+<title>Sea Breezze Hotel Bacolod</title>
+</head>
+<body>
+<p>You successfully signed up a reservation form. Kindly wait for an acceptance in a few moments.</p>
+<table>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Email Address</th>
+</tr>
+<tr>
+<td>".$firstname."</td>
+<td>".$lastname."</td>
+<td>".$email."</td>
+</tr>
+</table>
+</body>
+</html>
+";
 
+// Always set content-type when sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
+// More headers
+$headers .= 'From: <webmaster@example.com>' . "\r\n";
+$headers .= 'Cc: seabreezebacolodcity@gmail.com' . "\r\n";
+mail($to,$subject,$message,$headers);
 
+	echo "<script>window.location = '../index.php'</script>";
 ?>
 
 
