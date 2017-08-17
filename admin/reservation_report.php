@@ -2,7 +2,8 @@
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "hotel");  
  $query = "SELECT * FROM reservation LEFT JOIN room ON reservation.room_id = room.room_id  ORDER BY date_reserved desc";  
- $result = mysqli_query($connect, $query);  
+ $result = mysqli_query($connect, $query); 
+ 
  ?> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
 <style type="text/css">
