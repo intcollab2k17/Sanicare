@@ -48,6 +48,8 @@
 							<a href="#"><i class="icon-facebook-with-circle"></i></a>
 							<a href="#"><i class="icon-instagram-with-circle"></i></a>
 							<a href="#"><i class="icon-linkedin-with-circle"></i></a>
+							<div class="fb-page" data-href="https://www.facebook.com/Sea-Breeze-Hotel-1198620890242990/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Sea-Breeze-Hotel-1198620890242990/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Sea-Breeze-Hotel-1198620890242990/">Sea Breeze Hotel</a></blockquote></div>
+							
 						</li>
 					</ul>
 				</div>

@@ -8,7 +8,7 @@
 						<ul class="sf-menu" id="fh5co-primary-menu">
 							<li><a class="active" href="index.php">Home</a></li>
 							<li>
-								<a href="#" class="fh5co-sub-ddown">Hotel</a>
+								<a href="#" class="fh5co-sub-ddown">Rooms</a>
 								<ul class="fh5co-sub-menu">
 								<?php include 'dbcon.php';
 						
