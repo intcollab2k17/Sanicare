@@ -5,11 +5,27 @@
  $result = mysqli_query($connect, $query); 
  
  ?> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<script src="jquery.min.js"></script> 
 <style type="text/css">
   .col-lg-12.col-md-12.col-sm-12.col-xs-12 {
     position: relative;
     top: 20px;
+}
+
+@media print{
+  .hasDatepicker{
+    border:none;
+    width:100%;
+  }
+.new{
+  display: inline-block;
+}
+  #filter{
+    display:none;
+  }
+  .printer{
+    display: none;
+  }
 }
 
   
@@ -29,17 +45,17 @@
       <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-          <h1>Reservation Report  <small></small></h1>
+          <h1>Sales Report  <small></small></h1>
         </div>
       </div>      
       <div class="row">
               <div class = "page-content-wrapper">
                   <div class = "form-group">
-                     <div class="col-md-3">
-                               <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
+                     <div class="col-md-3 new">
+                             <label class ="date-info">Date From </label>   <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
                      </div>
-                      <div class="col-md-3">  
-                               <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
+                      <div class="col-md-3 new">  
+                        <label class ="date-info">Date To: </label><input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
                       </div>
                       <div class="col-md-3">  
                                <input type="button" name="filter" id="filter" value="Filter" class="btn btn-info" />  
