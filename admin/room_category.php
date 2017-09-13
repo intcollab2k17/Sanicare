@@ -45,6 +45,7 @@
 								<th>Category Name</th>								
 							
 								<th>Status</th>
+								<th>Action</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -62,7 +63,44 @@
 								<td>
 									<span class="label label-sm label-success">Approved </span>
 								</td>
+								<td>
+									<a href = "#update_category<?=$row['room_category_id']?>" class = "btn btn-xs btn-success" data-toggle = "modal" data-target = "#update_category<?=$row['room_category_id']?>"><i class = "fa fa-pencil"></i> Edit</a>
+
+								</td>
 							</tr>
+							<div class="modal fade" id="update_category<?=$row['room_category_id']?>" tabindex="-1" role="basic" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+											<h4 class="modal-title">Edit Category</h4>
+										</div>
+										<div class="modal-body">
+											<form  method="POST" id = "form" action ="edit_room_category.php">
+												<div class="form-body">
+													<div class="form-group form-md-line-input">
+														<input type="text" class="form-control" name = "category_name" id="form_control_1" placeholder=" Category name" value = "<?=$row['category_name']?>">
+														<input type="hidden" class="form-control" name = "room_category_id" id="form_control_1" placeholder=" Category name" value = "<?=$row['room_category_id']?>">
+														<label for="form_control_1">Room Category Name</label>
+														<span class="help-block">Edit  the room category name here...</span>
+													</div>									
+												</div>
+												<div class="form-actions noborder">
+												<br/>
+												<br/>
+													<button  name = "submit" class="btn btn-block blue">Submit</button>				
+												</div>
+										</form>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+											
+										</div>
+									</div>
+									<!-- /.modal-content -->
+								</div>
+								<!-- /.modal-dialog -->
+							</div>
 							<?php } ?>						
 							</tbody>
 							</table>
