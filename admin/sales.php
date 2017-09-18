@@ -10,6 +10,22 @@
     position: relative;
     top: 20px;
 }
+@media print{
+  .hasDatepicker{
+    border:none;
+    width:100%;
+  }
+.new{
+  display: inline-block;
+}
+  #filter{
+    display:none;
+  }
+  .printer{
+    display: none;
+  }
+}
+
 
   
 </style>
@@ -34,10 +50,10 @@
       <div class="row">
               <div class = "page-content-wrapper">
                   <div class = "form-group">
-                     <div class="col-md-3">
+                     <div class="col-md-3 new">
                                <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
                      </div>
-                      <div class="col-md-3">  
+                   <div class="col-md-3 new">  
                                <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
                       </div>
                       <div class="col-md-3">  
