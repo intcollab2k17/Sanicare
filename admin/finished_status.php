@@ -9,6 +9,7 @@ include('dbcon.php');
 	 $email = $_POST['email'];
 	 $reservation_status = $_POST['reservation_status'];	 
 	 $sales_amount = $_POST['sales_amount'];	 
+	 $r_code = $_POST['r_code'];	 
 	
 	 $date2 = date('Y-m-d');
 	 
@@ -27,15 +28,17 @@ $message = "
 <title>Sea Breezze Hotel Bacolod</title>
 </head>
 <body>
-<p>Your Request to us has been </p>
+<p>Your Request to us has been Accepted Copy this code ".$r_code." and paste it to the Check Reservation to see your reservation details. </p>
 <table>
 <tr>
 <th>Firstname</th>
 <th>Lastname</th>
+<th>Code</th>
 </tr>
 <tr>
 <td>".$firstname."</td>
-<td></td>
+<td>".$lastname."</td>
+<td>".$r_code."</td>
 </tr>
 </table>
 </body>

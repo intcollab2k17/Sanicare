@@ -35,7 +35,13 @@ $message = "
 <title>Sea Breezze Hotel Bacolod</title>
 </head>
 <body>
-<p>You successfully signed up a reservation form. Kindly wait for an acceptance in a few moments.</p>
+<p>
+We would like to thank you for choosing to stay at Sea Breeze Hotel. 
+I hope that the accommodations and service were to your liking, as complete satisfaction is our goal at Sea Breeze Hotel.
+We would love to have the pleasure of seeing you as a regular guest. 
+We are looking forward to your next visit and wish you the best in your business and personal endeavors.
+
+Kindly please click this link <a href = 'seabreezehotel.000webhostapp.com'>seabreezehotel.000webhostapp.com</a> </p>
 <table>
 <tr>
 <th>Firstname</th>

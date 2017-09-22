@@ -115,6 +115,7 @@
 											<input type = "hidden" name = "firstname" value = "<?=$row['firstname'];?>">
 											<input type = "hidden" name = "lastname" value = "<?=$row['lastname'];?>">
 											<input type = "hidden" name = "email" value = "<?=$row['email'];?>">
+											<input type = "hidden" name = "r_code" value = "<?=$row['r_code'];?>">
 											<input type = "hidden" name = "reservation_status" value = "Finished">
 											<div class = "form-group">
 												<label>Total amount to be payed!</label><br/>

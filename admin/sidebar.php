@@ -44,10 +44,12 @@
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
+						<li><a href="customer.php"><i class="fa fa-users"></i>Customer</a></li>	
 						<li><a href="sales.php"><i class="fa fa-money"></i>Sales</a></li>	
 						<li><a href="reservation_report.php"><i class="fa fa-file-zip-o"></i>Reservation</a></li>
 					</ul>
 				</li>
 				<li><a href="messages.php"><i class="icon-envelope"></i>Messages</a></li>	
+				<li><a href="backup.php"><i class="icon-refresh"></i>Back Up Data</a></li>	
 			</ul>
 		</div>

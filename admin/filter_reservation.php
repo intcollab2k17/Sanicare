@@ -64,7 +64,7 @@
                 $output2 .= '
                 <tdwidth="5%">Total Number of Reservation</td>  
                 <td>'. $row4['total'].'</td>
-                <td><a hreff = "#" class = "btn btn-success btn-block printer new" onclick = "window.print();">Print</a></td>
+                <td><a hreff = "#" class = "btn btn-success btn-block printer" onclick = "window.print();">Print</a></td>
                 ';               ;
               }  
         }

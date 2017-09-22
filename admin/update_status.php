@@ -21,19 +21,17 @@ $message = "
 <title>Sea Breezze Hotel Bacolod</title>
 </head>
 <body>
-<p>Your Request to us has been ".$reservation_status." </p>
+<p>Your Request to us has been ".$reservation_status." <br/>Your Request to us has been Accepted Copy this code ".$r_code." and paste it to the Check Reservation to see your reservation details. </p>
 <table>
 <tr>
 <th>Firstname</th>
 <th>Lastname</th>
-<th>Email Address</th>
 <th>Reservation Code</th>
 </tr>
 <tr>
 <td>".$firstname."</td>
 <td>".$lastname."</td>
 <td>".$r_code."</td>
-<td>".$email."</td>
 </tr>
 </table>
 </body>
