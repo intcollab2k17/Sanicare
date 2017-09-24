@@ -1,30 +1,42 @@
 <?php  
  //filter.php  
+
+                include('dbcon.php');
+                    $query=mysqli_query($con,"select * from reservation LEFT JOIN room ON room.room_id = reservation.room_id WHERE reservation_status = 'Cancel' OR reservation_status = 'Accept' OR reservation_status = 'Finished'")or die(mysqli_error());
+                      $row1=mysqli_fetch_array($query);
+                       
+                        $date_check = new DAteTime($row1['check_in']);                                
+                        $date_out = new DAteTime($row1['check_out']);  
+                        $diff = $date_out->diff($date_check)->format("%a");                                
+  
  if(isset($_POST["from_date"], $_POST["to_date"]))  
  {  
       $connect = mysqli_connect("localhost", "root", "", "hotel");  
       $output = '';  
-      $query = " SELECT * FROM sales WHERE payment_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'"; 
+      $query = " SELECT * FROM sales LEFT JOIN reservation ON reservation.reservation_id = sales.reservation_id WHERE payment_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'"; 
 
-      $result = mysqli_query($connect, $query); 
+      $result = mysqli_query($connect, $query);
       $output .= '  
            <table class="table table-bordered" id = "sample_2">  
                 <tr>  
-                     <th width="5%">ID</th>  
+                     <th width="30%">Customer Name</th>  
                      <th width="30%">Sales Amount</th>  
                      <th width="30%">Payment Date</th>  
+                     <th width="30%">Number of days stayed</th>  
                                          
                 </tr>  
       ';  
       if(mysqli_num_rows($result) > 0)  
       {  
-           while($row = mysqli_fetch_array($result))  
+           while($row = mysqli_fetch_array($result))
            {  
                 $output .= '  
                      <tr>  
-                          <td>'. $row["sales_id"] .'</td>  
+
+                          <td>'. $row["firstname"]. ' ' .$row["lastname"] .'</td>  
                           <td>'. $row["sales_amount"] .'</td>
-                          <td>'. $row["payment_date"] .'</td>
+                          <td>'. $row["payment_date"] .'</td>                         
+                          <td>'. $diff .'</td>                         
                      </tr>
                 '; 
 

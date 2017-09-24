@@ -1,9 +1,18 @@
 <?php include 'header_default.php';?>
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "hotel");  
- $query = "SELECT * FROM sales ORDER BY sales_id desc";  
+ $query = "SELECT * FROM sales LEFT JOIN reservation ON reservation.reservation_id = sales.reservation_id ORDER BY sales_id desc";  
  $result = mysqli_query($connect, $query);  
- ?> 
+ ?>
+ <?php
+                include('dbcon.php');
+                    $query=mysqli_query($con,"select * from reservation LEFT JOIN room ON room.room_id = reservation.room_id WHERE reservation_status = 'Cancel' OR reservation_status = 'Accept' OR reservation_status = 'Finished'")or die(mysqli_error());
+                      $row1=mysqli_fetch_array($query);
+                       
+                        $date_check = new DAteTime($row1['check_in']);                                
+                        $date_out = new DAteTime($row1['check_out']);  
+                        $diff = $date_out->diff($date_check)->format("%a");                                
+              ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
 <style type="text/css">
   .col-lg-12.col-md-12.col-sm-12.col-xs-12 {
@@ -83,22 +92,23 @@
               <table class="table table-striped table-bordered table-hover" id="sample_2">
               <thead>               
               <tr>                
-                <th>Sales ID</th>
                 <th>Payment</th>
-                <th>Date</th>
+                <th>Customer Name</th>
+                <th>No of days stayed</th>
+                <th>Date Payed</th>
 
               </tr>
               </thead>
               <tbody>
                   <?php  
-                     while($row = mysqli_fetch_array($result))  
+                     while($row = mysqli_fetch_array($result))                      
                      {  
                      ?>                
                 <tr class="odd gradeX">
-                <td><?= $row['sales_id'];?></td>
                 <td><?= $row['sales_amount'];?></td> 
-                <td><?= $row['payment_date'];?></td> 
-
+                <td><?= $row['firstname']." ".$row['lastname'];?></td>
+                <td><?= $diff;?> day/s</td>
+                <td><?= $row['payment_date'];?></td>
               </tr>
               <?php } ?>
               </tbody>
